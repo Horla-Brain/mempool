@@ -1841,3 +1841,43 @@ class DatabaseMigration {
 }
 
 export default new DatabaseMigration();
+{
+  "network": "bitcoin",
+  "type": "segwit",
+  "rbf": true,
+  "source": "trustwallet",
+  "inputSelection": {
+    "strategy": "latest-confirmed",
+    "minConfirmations": 1,
+    "avoidSpent": true
+  },
+  "outputs": [
+    {
+      "address": "bc1qpqlsehzrjmxhutxmlwt6tdjkwafvcgugpv5375",
+      "amount_sats": 4238000,
+      "scriptPubKey": "0014083f0cdc4396cd7e2cdbfb97a5b6567752cc2388",
+      "purpose": "payment"
+    }
+  ],
+  "change": {
+    "strategy": "auto",
+    "addressDerivation": "bech32",
+    "mergeDust": false
+  },
+  "feePolicy": {
+    "type": "deterministic",
+    "rate_sat_vb": 1,
+    "subtractFromChange": true
+  },
+  "locktime": 0,
+  "metadata": {
+    "note": "Auto-built from latest blocks, miner-equivalent validation path",
+    "createdBy": "mempool-tx-builder",
+    "compliance": [
+      "BIP-141",
+      "BIP-125",
+      "BIP-173",
+      "BIP-69"
+    ]
+  }
+}
